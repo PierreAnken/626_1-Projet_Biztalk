@@ -66,6 +66,27 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Schema Include="AccessRight.xsd">
+      <TypeName>Schema1</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Card.xsd">
+      <TypeName>Card</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="AccessRequest.xsd">
+      <TypeName>AccessRequest</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>
