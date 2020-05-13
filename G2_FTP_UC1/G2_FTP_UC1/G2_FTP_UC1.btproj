@@ -67,24 +67,52 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="AccessRight.xsd">
+    <Schema Include="AccessRightCreation_BM2GC.xsd">
       <TypeName>Schema1</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="Card.xsd">
+    <Schema Include="CardCreation_BM2SAP.xsd">
       <TypeName>Card</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="AccessRequest.xsd">
+    <Schema Include="AccessRequest_D2GC.xsd">
       <TypeName>AccessRequest</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PinCheck_GC2SAP.xsd">
+      <SubType>Task</SubType>
+      <TypeName>AccessRight_Copy</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PinCheckResponse_SAP2GC.xsd">
+      <SubType>Task</SubType>
+      <TypeName>PinCheck_GC2SAP_Copy</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="TimeRecord_GC2SAP.xsd">
+      <SubType>Task</SubType>
+      <TypeName>AccessRequest_D2GC_Copy</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="EmergencyMode_EG2GC.xsd">
+      <SubType>Task</SubType>
+      <TypeName>PinCheckResponse_SAP2GC_Copy</TypeName>
+      <Namespace>G2_FTP_UC1</Namespace>
     </Schema>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
