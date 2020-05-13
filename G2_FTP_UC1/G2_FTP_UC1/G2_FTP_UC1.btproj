@@ -32,7 +32,17 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>G2FTPUC1.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -67,53 +77,67 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="AccessRightCreation_BM2GC.xsd">
-      <TypeName>Schema1</TypeName>
+    <Schema Include="XSD\AccessRightCreation_BM2GC.xsd">
+      <TypeName>AccessRightCreation</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="CardCreation_BM2SAP.xsd">
-      <TypeName>Card</TypeName>
+    <Schema Include="XSD\CardCreation_BM2SAP.xsd">
+      <TypeName>CardCreation</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="AccessRequest_D2GC.xsd">
+    <Schema Include="XSD\AccessRequest_D2GC.xsd">
       <TypeName>AccessRequest</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
       <SubType>Task</SubType>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="PinCheck_GC2SAP.xsd">
+    <Schema Include="XSD\PinCheck_GC2SAP.xsd">
       <SubType>Task</SubType>
-      <TypeName>AccessRight_Copy</TypeName>
+      <TypeName>PinCheck</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="PinCheckResponse_SAP2GC.xsd">
+    <Schema Include="XSD\PinCheckResponse_SAP2GC.xsd">
       <SubType>Task</SubType>
-      <TypeName>PinCheck_GC2SAP_Copy</TypeName>
+      <TypeName>PinCheckResponse</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="TimeRecord_GC2SAP.xsd">
+    <Schema Include="XSD\TimeRecord_GC2SAP.xsd">
       <SubType>Task</SubType>
-      <TypeName>AccessRequest_D2GC_Copy</TypeName>
+      <TypeName>TimeRecord</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="EmergencyMode_EG2GC.xsd">
+    <Schema Include="XSD\EmergencyMode_EG2GC.xsd">
       <SubType>Task</SubType>
-      <TypeName>PinCheckResponse_SAP2GC_Copy</TypeName>
+      <TypeName>EmergencyMode</TypeName>
       <Namespace>G2_FTP_UC1</Namespace>
     </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Orchestrations\" />
+    <Folder Include="Pipelines\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="G2FTPUC1.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\CardCreation_BM2SAP.btm">
+      <TypeName>Map1</TypeName>
+      <Namespace>G2_FTP_UC1.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
