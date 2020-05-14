@@ -1,0 +1,4 @@
+C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\G2_FTP_UC1\G2_FTP_UC1\bin\Debug\G2_FTP_UC1.dll
+C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\G2_FTP_UC1\G2_FTP_UC1\bin\Debug\G2_FTP_UC1.pdb
+C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\G2_FTP_UC1\G2_FTP_UC1\obj\Debug\G2_FTP_UC1.dll
+C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\G2_FTP_UC1\G2_FTP_UC1\obj\Debug\G2_FTP_UC1.pdb
