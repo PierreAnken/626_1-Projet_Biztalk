@@ -82,6 +82,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="G2FTPUC1.snk" />
+    <Schema Include="PropertySchema.xsd">
+      <TypeName>PropertySchema</TypeName>
+      <Namespace>G2_FTP_UC1.PropertySchema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="XSD\TimeRecord_GC2SAP.xsd">
       <TypeName>TimeRecord_GC2SAP</TypeName>
       <Namespace>G2_FTP_UC1.XSD</Namespace>
@@ -119,8 +124,8 @@
     </Schema>
   </ItemGroup>
   <ItemGroup>
-    <Map Include="Maps\CardCreation_BM2SAP.btm">
-      <TypeName>Map1</TypeName>
+    <Map Include="Maps\PinCheck2Response.btm">
+      <TypeName>PinCheck2Response</TypeName>
       <Namespace>G2_FTP_UC1.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
