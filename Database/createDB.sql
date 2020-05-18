@@ -182,6 +182,28 @@ INSERT [dbo].[SAP_HR] ([UID], [CardId], [PIN]) VALUES (N'PTP52344', 7330038, 483
 GO
 INSERT [dbo].[SAP_HR] ([UID], [CardId], [PIN]) VALUES (N'JKF34254', 6191128, 6686)
 GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2235026, 1, DATEADD(hour, -4, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2906164, 1, DATEADD(hour, -6, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (8139494, 1, DATEADD(hour, -2, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2208972, 1, DATEADD(hour, -11, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (5192471, 1, DATEADD(hour, -8, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (9708443, 1, DATEADD(hour, -6.5, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (1268207, 1, DATEADD(hour, -4.342, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6749277, 1, DATEADD(hour, -7.423, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (3590351, 1, DATEADD(hour, -8.7645, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (7330038, 1, DATEADD(hour, -8.945, SYSDATETIME()), 1, null)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6191128, 1, DATEADD(hour, -9.1234, SYSDATETIME()), 1, null)
+GO
 USE [master]
 GO
 ALTER DATABASE [G2FTPUC1] SET  READ_WRITE 
