@@ -1,20 +1,30 @@
-USE [G2FTPUC1]
-GO
-/****** Object:  Table [dbo].[SAP_HR]    Script Date: 14.05.2020 19:30:08 ******/
-DROP TABLE [dbo].[SAP_HR]
-GO
-/****** Object:  Table [dbo].[GC_Rights]    Script Date: 14.05.2020 19:30:08 ******/
-DROP TABLE [dbo].[GC_Rights]
-GO
-/****** Object:  Table [dbo].[GC_AccessLog]    Script Date: 14.05.2020 19:30:08 ******/
-DROP TABLE [dbo].[GC_AccessLog]
-GO
-USE [master]
-GO
-/****** Object:  Database [G2FTPUC1]    Script Date: 14.05.2020 19:30:08 ******/
-DROP DATABASE [G2FTPUC1]
-GO
-/****** Object:  Database [G2FTPUC1]    Script Date: 14.05.2020 19:30:08 ******/
+DECLARE @Table TABLE(
+        SPID INT,
+        Status VARCHAR(MAX),
+        LOGIN VARCHAR(MAX),
+        HostName VARCHAR(MAX),
+        BlkBy VARCHAR(MAX),
+        DBName VARCHAR(MAX),
+        Command VARCHAR(MAX),
+        CPUTime INT,
+        DiskIO INT,
+        LastBatch VARCHAR(MAX),
+        ProgramName VARCHAR(MAX),
+        SPID_1 INT,
+        REQUESTID INT
+)
+INSERT INTO @Table EXEC sp_who2
+
+DECLARE @kid SMALLINT
+SET @kid = (SELECT spid FROM @Table WHERE DBName = 'G2FTPUC1')
+DECLARE @SQL nvarchar(1000)
+SET @SQL = 'KILL ' + CAST(@kid as varchar(4))
+EXEC (@SQL)
+
+USE master
+IF EXISTS(select * from sys.databases where name='G2FTPUC1')
+DROP DATABASE G2FTPUC1
+/****** Object:  Database [G2FTPUC1]    Script Date: 19.05.2020 18:12:17 ******/
 CREATE DATABASE [G2FTPUC1]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -103,7 +113,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
 GO
 USE [G2FTPUC1]
 GO
-/****** Object:  Table [dbo].[GC_AccessLog]    Script Date: 14.05.2020 19:30:08 ******/
+/****** Object:  Table [dbo].[GC_AccessLog]    Script Date: 19.05.2020 18:12:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -116,7 +126,7 @@ CREATE TABLE [dbo].[GC_AccessLog](
 	[WorkTimeComputed] [nvarchar](50) NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GC_Rights]    Script Date: 14.05.2020 19:30:08 ******/
+/****** Object:  Table [dbo].[GC_Rights]    Script Date: 19.05.2020 18:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -127,7 +137,7 @@ CREATE TABLE [dbo].[GC_Rights](
 	[UID] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SAP_HR]    Script Date: 14.05.2020 19:30:08 ******/
+/****** Object:  Table [dbo].[SAP_HR]    Script Date: 19.05.2020 18:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -137,6 +147,28 @@ CREATE TABLE [dbo].[SAP_HR](
 	[CardId] [int] NOT NULL,
 	[PIN] [int] NOT NULL
 ) ON [PRIMARY]
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2235026, 1, CAST(N'2020-05-18T13:30:21.977' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2906164, 1, CAST(N'2020-05-18T11:30:21.977' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (8139494, 1, CAST(N'2020-05-18T15:30:21.993' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2208972, 1, CAST(N'2020-05-18T06:30:21.993' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (5192471, 1, CAST(N'2020-05-18T09:30:21.993' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (9708443, 1, CAST(N'2020-05-18T11:30:21.993' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (1268207, 1, CAST(N'2020-05-18T13:30:22.007' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6749277, 1, CAST(N'2020-05-18T10:30:22.007' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (3590351, 1, CAST(N'2020-05-18T09:30:22.007' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (7330038, 1, CAST(N'2020-05-18T09:30:22.007' AS DateTime), 1, NULL)
+GO
+INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6191128, 1, CAST(N'2020-05-18T08:30:22.007' AS DateTime), 1, NULL)
 GO
 INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (2235026, N'default', N'ASX12354')
 GO
@@ -181,28 +213,6 @@ GO
 INSERT [dbo].[SAP_HR] ([UID], [CardId], [PIN]) VALUES (N'PTP52344', 7330038, 4838)
 GO
 INSERT [dbo].[SAP_HR] ([UID], [CardId], [PIN]) VALUES (N'JKF34254', 6191128, 6686)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2235026, 1, DATEADD(hour, -4, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2906164, 1, DATEADD(hour, -6, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (8139494, 1, DATEADD(hour, -2, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (2208972, 1, DATEADD(hour, -11, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (5192471, 1, DATEADD(hour, -8, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (9708443, 1, DATEADD(hour, -6.5, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (1268207, 1, DATEADD(hour, -4.342, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6749277, 1, DATEADD(hour, -7.423, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (3590351, 1, DATEADD(hour, -8.7645, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (7330038, 1, DATEADD(hour, -8.945, SYSDATETIME()), 1, null)
-GO
-INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6191128, 1, DATEADD(hour, -9.1234, SYSDATETIME()), 1, null)
 GO
 USE [master]
 GO
