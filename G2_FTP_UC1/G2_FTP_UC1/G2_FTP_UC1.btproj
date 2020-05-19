@@ -78,10 +78,42 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pipelines\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="G2FTPUC1.snk" />
+    <Schema Include="XSD\FF_TimeRecord_GC2SAP.xsd">
+      <TypeName>FF_TimeRecord_GC2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_PinCheckResponse_SAP2GC.xsd">
+      <TypeName>FF_PinCheckResponse_SAP2GC</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_PinCheck_GC2SAP.xsd">
+      <TypeName>FF_PinCheck_GC2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_AccessRightCreation_BM2GC.xsd">
+      <TypeName>FF_AccessRightCreation_BM2GC</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_AccessRequest_D2GC.xsd">
+      <TypeName>FF_AccessRequest_D2GC</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_EmergencyMode_EG2GC.xsd">
+      <TypeName>FF_EmergencyMode_EG2GC</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\FF_CardCreation_BM2SAP.xsd">
+      <TypeName>FF_CardCreation_BM2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="PropertySchema.xsd">
       <TypeName>PropertySchema</TypeName>
       <Namespace>G2_FTP_UC1.PropertySchema</Namespace>
@@ -129,6 +161,20 @@
       <Namespace>G2_FTP_UC1.Maps</Namespace>
       <SubType>Task</SubType>
     </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\FF2XML_CardCreation_BM2SAP.btp">
+      <TypeName>FF2XML_CardCreation_BM2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\XML2FF_CardCreation_BM2SAP.btp">
+      <TypeName>XML2FF_CardCreation_BM2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
