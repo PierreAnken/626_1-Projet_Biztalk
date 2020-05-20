@@ -7,7 +7,7 @@ namespace G2_FTP_UC1.Pipelines
     using Microsoft.BizTalk.Component.Interop;
     
     
-    public sealed class XML2FF_CardCreation_BM2SAP : Microsoft.BizTalk.PipelineOM.SendPipeline
+    public sealed class XML2FF_AccessRightCreation_BM2GC : Microsoft.BizTalk.PipelineOM.SendPipeline
     {
         
         private const string _strPipeline = "<?xml version=\"1.0\" encoding=\"utf-16\"?><Document xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instanc"+
@@ -22,21 +22,21 @@ namespace G2_FTP_UC1.Pipelines
 "          <ComponentName>Flat file assembler</ComponentName>          <Description>Flat file assembl"+
 "er component.</Description>          <Version>1.0</Version>          <Properties>            <Proper"+
 "ty Name=\"HeaderSpecName\" />            <Property Name=\"DocumentSpecName\">              <Value xsi:ty"+
-"pe=\"xsd:string\">G2_FTP_UC1.XSD.FF_CardCreation_BM2SAP</Value>            </Property>            <Pro"+
-"perty Name=\"TrailerSpecName\" />            <Property Name=\"TargetCharset\">              <Value xsi:t"+
-"ype=\"xsd:string\" />            </Property>            <Property Name=\"TargetCodePage\">              "+
-"<Value xsi:type=\"xsd:int\">0</Value>            </Property>            <Property Name=\"PreserveBom\"> "+
-"             <Value xsi:type=\"xsd:boolean\">false</Value>            </Property>            <Property"+
-" Name=\"HiddenProperties\">              <Value xsi:type=\"xsd:string\">TargetCodePage</Value>          "+
-"  </Property>          </Properties>          <CachedDisplayName>Flat file assembler</CachedDisplayN"+
-"ame>          <CachedIsManaged>true</CachedIsManaged>        </Component>      </Components>    </St"+
-"age>    <Stage>      <PolicyFileStage _locAttrData=\"Name\" _locID=\"3\" Name=\"Encode\" minOccurs=\"0\" max"+
-"Occurs=\"-1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components />  "+
-"  </Stage>  </Stages></Document>";
+"pe=\"xsd:string\">G2_FTP_UC1.XSD.FF_AccessRightCreation_BM2GC</Value>            </Property>          "+
+"  <Property Name=\"TrailerSpecName\" />            <Property Name=\"TargetCharset\">              <Value"+
+" xsi:type=\"xsd:string\" />            </Property>            <Property Name=\"TargetCodePage\">        "+
+"      <Value xsi:type=\"xsd:int\">0</Value>            </Property>            <Property Name=\"Preserve"+
+"Bom\">              <Value xsi:type=\"xsd:boolean\">false</Value>            </Property>            <Pr"+
+"operty Name=\"HiddenProperties\">              <Value xsi:type=\"xsd:string\">TargetCodePage</Value>    "+
+"        </Property>          </Properties>          <CachedDisplayName>Flat file assembler</CachedDi"+
+"splayName>          <CachedIsManaged>true</CachedIsManaged>        </Component>      </Components>  "+
+"  </Stage>    <Stage>      <PolicyFileStage _locAttrData=\"Name\" _locID=\"3\" Name=\"Encode\" minOccurs=\""+
+"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Component"+
+"s />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "2c3e52cf-8311-46dc-80bf-0cd3fa41a4b7";
+        private const string _versionDependentGuid = "954672e4-422b-49ab-917c-e4bd05c0e196";
         
-        public XML2FF_CardCreation_BM2SAP()
+        public XML2FF_AccessRightCreation_BM2GC()
         {
             Microsoft.BizTalk.PipelineOM.Stage stage = this.AddStage(new System.Guid("9d0e4107-4cce-4536-83fa-4a5040674ad6"), Microsoft.BizTalk.PipelineOM.ExecutionMode.all);
             IBaseComponent comp0 = Microsoft.BizTalk.PipelineOM.PipelineManager.CreateComponent("Microsoft.BizTalk.Component.FFAsmComp,Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");;
@@ -44,12 +44,12 @@ namespace G2_FTP_UC1.Pipelines
             {
                 string comp0XmlProperties = "<?xml version=\"1.0\" encoding=\"utf-16\"?><PropertyBag xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-inst"+
 "ance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Properties>    <Property Name=\"HeaderSpecName\""+
-" />    <Property Name=\"DocumentSpecName\">      <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.FF_CardCr"+
-"eation_BM2SAP</Value>    </Property>    <Property Name=\"TrailerSpecName\" />    <Property Name=\"Targe"+
-"tCharset\">      <Value xsi:type=\"xsd:string\" />    </Property>    <Property Name=\"TargetCodePage\">  "+
-"    <Value xsi:type=\"xsd:int\">0</Value>    </Property>    <Property Name=\"PreserveBom\">      <Value "+
-"xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Property Name=\"HiddenProperties\">      <Valu"+
-"e xsi:type=\"xsd:string\">TargetCodePage</Value>    </Property>  </Properties></PropertyBag>";
+" />    <Property Name=\"DocumentSpecName\">      <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.FF_Access"+
+"RightCreation_BM2GC</Value>    </Property>    <Property Name=\"TrailerSpecName\" />    <Property Name="+
+"\"TargetCharset\">      <Value xsi:type=\"xsd:string\" />    </Property>    <Property Name=\"TargetCodePa"+
+"ge\">      <Value xsi:type=\"xsd:int\">0</Value>    </Property>    <Property Name=\"PreserveBom\">      <"+
+"Value xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Property Name=\"HiddenProperties\">     "+
+" <Value xsi:type=\"xsd:string\">TargetCodePage</Value>    </Property>  </Properties></PropertyBag>";
                 PropertyBag pb = PropertyBag.DeserializeFromXml(comp0XmlProperties);;
                 ((IPersistPropertyBag)(comp0)).Load(pb, 0);
             }

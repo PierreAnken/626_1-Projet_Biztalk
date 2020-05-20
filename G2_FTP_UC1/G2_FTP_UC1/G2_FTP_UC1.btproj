@@ -79,6 +79,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="G2FTPUC1.snk" />
+    <Schema Include="XSD\FF_CardCreationPIN_SAP2SAP.xsd">
+      <TypeName>FF_CardCreationPIN_SAP2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="XSD\CardCreationPIN_SAP2SAP.xsd">
+      <TypeName>CardCreationPIN_SAP2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.XSD</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="XSD\FF_TimeRecord_GC2SAP.xsd">
       <TypeName>FF_TimeRecord_GC2SAP</TypeName>
       <Namespace>G2_FTP_UC1.XSD</Namespace>
@@ -172,6 +182,34 @@
   <ItemGroup>
     <Pipeline Include="Pipelines\XML2FF_CardCreation_BM2SAP.btp">
       <TypeName>XML2FF_CardCreation_BM2SAP</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\FF2XML_AccessRightCreation_BM2GC.btp">
+      <TypeName>FF2XML_AccessRightCreation_BM2GC</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\XML2FF_AccessRightCreation_BM2GC.btp">
+      <TypeName>XML2FF_AccessRightCreation_BM2GC</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\CardCreation2CardCreationPIN.btm">
+      <TypeName>CardCreation2CardCreationPIN</TypeName>
+      <Namespace>G2_FTP_UC1.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\FF2XML_CardCreationPIN_SAP2SAP.btp">
+      <TypeName>FF2XML_CardCreationPIN_SAP2SAP</TypeName>
       <Namespace>G2_FTP_UC1.Pipelines</Namespace>
       <SubType>Task</SubType>
     </Pipeline>

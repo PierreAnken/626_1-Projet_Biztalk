@@ -7,7 +7,7 @@ namespace G2_FTP_UC1.Pipelines
     using Microsoft.BizTalk.Component.Interop;
     
     
-    public sealed class FF2XML_CardCreation_BM2SAP : Microsoft.BizTalk.PipelineOM.ReceivePipeline
+    public sealed class FF2XML_AccessRightCreation_BM2GC : Microsoft.BizTalk.PipelineOM.ReceivePipeline
     {
         
         private const string _strPipeline = "<?xml version=\"1.0\" encoding=\"utf-16\"?><Document xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instanc"+
@@ -22,22 +22,22 @@ namespace G2_FTP_UC1.Pipelines
 "Name>          <ComponentName>Flat file disassembler</ComponentName>          <Description>Streaming"+
 " flat file disassembler component</Description>          <Version>1.0</Version>          <Properties"+
 ">            <Property Name=\"HeaderSpecName\" />            <Property Name=\"DocumentSpecName\">       "+
-"       <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.FF_CardCreation_BM2SAP</Value>            </Prope"+
-"rty>            <Property Name=\"TrailerSpecName\" />            <Property Name=\"PreserveHeader\">     "+
-"         <Value xsi:type=\"xsd:boolean\">false</Value>            </Property>            <Property Nam"+
-"e=\"ValidateDocumentStructure\">              <Value xsi:type=\"xsd:boolean\">false</Value>            <"+
-"/Property>            <Property Name=\"RecoverableInterchangeProcessing\">              <Value xsi:typ"+
-"e=\"xsd:boolean\">false</Value>            </Property>          </Properties>          <CachedDisplayN"+
-"ame>Flat file disassembler</CachedDisplayName>          <CachedIsManaged>true</CachedIsManaged>     "+
-"   </Component>      </Components>    </Stage>    <Stage>      <PolicyFileStage _locAttrData=\"Name\" "+
-"_locID=\"3\" Name=\"Validate\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410d-4cce-4536"+
-"-83fa-4a5040674ad6\" />      <Components />    </Stage>    <Stage>      <PolicyFileStage _locAttrData"+
-"=\"Name\" _locID=\"4\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e41"+
-"0e-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
+"       <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.AccessRightCreation_BM2GC</Value>            </Pr"+
+"operty>            <Property Name=\"TrailerSpecName\" />            <Property Name=\"PreserveHeader\">  "+
+"            <Value xsi:type=\"xsd:boolean\">false</Value>            </Property>            <Property "+
+"Name=\"ValidateDocumentStructure\">              <Value xsi:type=\"xsd:boolean\">false</Value>          "+
+"  </Property>            <Property Name=\"RecoverableInterchangeProcessing\">              <Value xsi:"+
+"type=\"xsd:boolean\">false</Value>            </Property>          </Properties>          <CachedDispl"+
+"ayName>Flat file disassembler</CachedDisplayName>          <CachedIsManaged>true</CachedIsManaged>  "+
+"      </Component>      </Components>    </Stage>    <Stage>      <PolicyFileStage _locAttrData=\"Nam"+
+"e\" _locID=\"3\" Name=\"Validate\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410d-4cce-4"+
+"536-83fa-4a5040674ad6\" />      <Components />    </Stage>    <Stage>      <PolicyFileStage _locAttrD"+
+"ata=\"Name\" _locID=\"4\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0"+
+"e410e-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "6cd3053c-a388-448d-afea-1ea400a32306";
+        private const string _versionDependentGuid = "be7e5854-89d7-4273-8b5b-057a93555840";
         
-        public FF2XML_CardCreation_BM2SAP()
+        public FF2XML_AccessRightCreation_BM2GC()
         {
             Microsoft.BizTalk.PipelineOM.Stage stage = this.AddStage(new System.Guid("9d0e4105-4cce-4536-83fa-4a5040674ad6"), Microsoft.BizTalk.PipelineOM.ExecutionMode.firstRecognized);
             IBaseComponent comp0 = Microsoft.BizTalk.PipelineOM.PipelineManager.CreateComponent("Microsoft.BizTalk.Component.FFDasmComp,Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");;
@@ -45,12 +45,12 @@ namespace G2_FTP_UC1.Pipelines
             {
                 string comp0XmlProperties = "<?xml version=\"1.0\" encoding=\"utf-16\"?><PropertyBag xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-inst"+
 "ance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Properties>    <Property Name=\"HeaderSpecName\""+
-" />    <Property Name=\"DocumentSpecName\">      <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.FF_CardCr"+
-"eation_BM2SAP</Value>    </Property>    <Property Name=\"TrailerSpecName\" />    <Property Name=\"Prese"+
-"rveHeader\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Property Name=\"Valid"+
-"ateDocumentStructure\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Property "+
-"Name=\"RecoverableInterchangeProcessing\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Prope"+
-"rty>  </Properties></PropertyBag>";
+" />    <Property Name=\"DocumentSpecName\">      <Value xsi:type=\"xsd:string\">G2_FTP_UC1.XSD.AccessRig"+
+"htCreation_BM2GC</Value>    </Property>    <Property Name=\"TrailerSpecName\" />    <Property Name=\"Pr"+
+"eserveHeader\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Property Name=\"Va"+
+"lidateDocumentStructure\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Property>    <Proper"+
+"ty Name=\"RecoverableInterchangeProcessing\">      <Value xsi:type=\"xsd:boolean\">false</Value>    </Pr"+
+"operty>  </Properties></PropertyBag>";
                 PropertyBag pb = PropertyBag.DeserializeFromXml(comp0XmlProperties);;
                 ((IPersistPropertyBag)(comp0)).Load(pb, 0);
             }

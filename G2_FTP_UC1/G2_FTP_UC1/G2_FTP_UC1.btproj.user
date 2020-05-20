@@ -12,6 +12,20 @@
     <VisualStudio>
       <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
         <Files>
+		<File Path="Maps\CardCreation2CardCreationPIN.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename>C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\Message_Sample\TXT\CardCreation_BM2SAP.txt</TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename>C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\Message_Sample\TXT\CardCreationPIN_SAP2SAP.txt</TestMapOutputInstanceFilename>
+			<TestMapSourceType>2</TestMapSourceType>
+			<TestMapTargetType>1</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
 		<File Path="Maps\PinCheck2Response.btm">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
@@ -82,6 +96,20 @@
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
 			<AutoRefreshSchema>0</AutoRefreshSchema>
 		</File>
+		<File Path="XSD\CardCreationPIN_SAP2SAP.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
 		<File Path="XSD\EmergencyMode_EG2GC.xsd">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
@@ -133,6 +161,20 @@
 			<TestMapTargetType>0</TestMapTargetType>
 			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
 			<EditorInputInstanceFilename>C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\Message_Sample\TXT\CardCreation_BM2SAP.txt</EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>1</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="XSD\FF_CardCreationPIN_SAP2SAP.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename>C:\Users\Easilab\Desktop\HEVS_S8_Projet_Biztalk\Message_Sample\TXT\CardCreationPIN_SAP2SAP.txt</EditorInputInstanceFilename>
 			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
 			<ValidateInstanceInputType>1</ValidateInstanceInputType>
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
