@@ -6,24 +6,24 @@ namespace G2_FTP_UC1.XSD {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
-    [Schema(@"http://G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP",@"PinCheck")]
+    [Schema(@"http://G2_FTP_UC1.XSD.FF_AccessResponse_GC2GC_xsd",@"AccessResponse")]
     [System.SerializableAttribute()]
-    [SchemaRoots(new string[] {@"PinCheck"})]
-    public sealed class FF_PinCheck_GC2SAP : Microsoft.XLANGs.BaseTypes.SchemaBase {
+    [SchemaRoots(new string[] {@"AccessResponse"})]
+    public sealed class FF_AccessResponse_GC2GC_xsd : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
         private static object _rawSchema;
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns=""http://G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://G2_FTP_UC1.XSD.FF_AccessResponse_GC2GC_xsd"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://G2_FTP_UC1.XSD.FF_AccessResponse_GC2GC_xsd"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:annotation>
     <xs:appinfo>
       <schemaEditorExtension:schemaInfo namespaceAlias=""b"" extensionClass=""Microsoft.BizTalk.FlatFileExtension.FlatFileExtension"" standardName=""Flat File"" xmlns:schemaEditorExtension=""http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions"" />
-      <b:schemaInfo standard=""Flat File"" codepage=""65001"" default_pad_char="" "" pad_char_type=""char"" count_positions_by_byte=""false"" parser_optimization=""speed"" lookahead_depth=""3"" suppress_empty_nodes=""false"" generate_empty_nodes=""true"" allow_early_termination=""false"" early_terminate_optional_fields=""false"" allow_message_breakup_of_infix_root=""false"" compile_parse_tables=""false"" root_reference=""PinCheck"" />
+      <b:schemaInfo standard=""Flat File"" codepage=""65001"" default_pad_char="" "" pad_char_type=""char"" count_positions_by_byte=""false"" parser_optimization=""speed"" lookahead_depth=""3"" suppress_empty_nodes=""false"" generate_empty_nodes=""true"" allow_early_termination=""false"" early_terminate_optional_fields=""false"" allow_message_breakup_of_infix_root=""false"" compile_parse_tables=""false"" root_reference=""AccessResponse"" />
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name=""PinCheck"">
+  <xs:element name=""AccessResponse"">
     <xs:annotation>
       <xs:appinfo>
         <b:recordInfo structure=""delimited"" child_delimiter_type=""char"" child_delimiter="";"" child_order=""infix"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" />
@@ -36,14 +36,14 @@ namespace G2_FTP_UC1.XSD {
             <groupInfo sequence_number=""0"" xmlns=""http://schemas.microsoft.com/BizTalk/2003"" />
           </xs:appinfo>
         </xs:annotation>
-        <xs:element name=""PIN"" type=""xs:int"">
+        <xs:element name=""CardId"" type=""xs:int"">
           <xs:annotation>
             <xs:appinfo>
               <b:fieldInfo justification=""left"" sequence_number=""1"" />
             </xs:appinfo>
           </xs:annotation>
         </xs:element>
-        <xs:element name=""UID"" type=""xs:string"">
+        <xs:element name=""AccessGranted"" type=""xs:boolean"">
           <xs:annotation>
             <xs:appinfo>
               <b:fieldInfo justification=""left"" sequence_number=""2"" />
@@ -55,7 +55,7 @@ namespace G2_FTP_UC1.XSD {
   </xs:element>
 </xs:schema>";
         
-        public FF_PinCheck_GC2SAP() {
+        public FF_AccessResponse_GC2GC_xsd() {
         }
         
         public override string XmlContent {
@@ -67,7 +67,7 @@ namespace G2_FTP_UC1.XSD {
         public override string[] RootNodes {
             get {
                 string[] _RootElements = new string [1];
-                _RootElements[0] = "PinCheck";
+                _RootElements[0] = "AccessResponse";
                 return _RootElements;
             }
         }

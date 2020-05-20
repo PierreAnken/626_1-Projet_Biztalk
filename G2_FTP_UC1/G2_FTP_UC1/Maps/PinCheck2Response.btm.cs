@@ -1,12 +1,12 @@
 namespace G2_FTP_UC1.Maps {
     
     
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"G2_FTP_UC1.XSD.PinCheck_GC2SAP", typeof(global::G2_FTP_UC1.XSD.PinCheck_GC2SAP))]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC", typeof(global::G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP", typeof(global::G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC", typeof(global::G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC))]
     public sealed class PinCheck2Response : global::Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
-<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 ScriptNS0 userCSharp"" version=""1.0"" xmlns:s0=""http://G2_FTP_UC1.XSD.PinCheck_GC2SAP"" xmlns:ns0=""http://G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC"" xmlns:ScriptNS0=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
+<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 ScriptNS0 userCSharp"" version=""1.0"" xmlns:s0=""http://G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP"" xmlns:ns0=""http://G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC"" xmlns:ScriptNS0=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
   <xsl:output omit-xml-declaration=""yes"" method=""xml"" version=""1.0"" />
   <xsl:template match=""/"">
     <xsl:apply-templates select=""/s0:PinCheck"" />
@@ -118,13 +118,13 @@ public bool ValToBool(string val)
   <ExtensionObject Namespace=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" AssemblyName=""Microsoft.BizTalk.BaseFunctoids, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"" ClassName=""Microsoft.BizTalk.BaseFunctoids.FunctoidScripts"" />
 </ExtensionObjects>";
         
-        private const string _strSrcSchemasList0 = @"G2_FTP_UC1.XSD.PinCheck_GC2SAP";
+        private const string _strSrcSchemasList0 = @"G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP";
         
-        private const global::G2_FTP_UC1.XSD.PinCheck_GC2SAP _srcSchemaTypeReference0 = null;
+        private const global::G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP _srcSchemaTypeReference0 = null;
         
-        private const string _strTrgSchemasList0 = @"G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC";
+        private const string _strTrgSchemasList0 = @"G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC";
         
-        private const global::G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC _trgSchemaTypeReference0 = null;
+        private const global::G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC _trgSchemaTypeReference0 = null;
         
         public override string XmlContent {
             get {
@@ -147,7 +147,7 @@ public bool ValToBool(string val)
         public override string[] SourceSchemas {
             get {
                 string[] _SrcSchemas = new string [1];
-                _SrcSchemas[0] = @"G2_FTP_UC1.XSD.PinCheck_GC2SAP";
+                _SrcSchemas[0] = @"G2_FTP_UC1.XSD.FF_PinCheck_GC2SAP";
                 return _SrcSchemas;
             }
         }
@@ -155,7 +155,7 @@ public bool ValToBool(string val)
         public override string[] TargetSchemas {
             get {
                 string[] _TrgSchemas = new string [1];
-                _TrgSchemas[0] = @"G2_FTP_UC1.XSD.PinCheckResponse_SAP2GC";
+                _TrgSchemas[0] = @"G2_FTP_UC1.XSD.FF_PinCheckResponse_SAP2GC";
                 return _TrgSchemas;
             }
         }
