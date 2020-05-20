@@ -235,6 +235,34 @@
       <SubType>Task</SubType>
     </Map>
   </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\FF2XML_EmergencyMode_EG2GC.btp">
+      <TypeName>FF2XML_EmergencyMode_EG2GC</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\XML2FF_EmergencyMode_GC2EG.btp">
+      <TypeName>XML2FF_EmergencyMode_GC2EG</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\FF2XML_TImeRecord_SAP2GC.btp">
+      <TypeName>FF2XML_TImeRecord_SAP2GC</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\XML2FF_TImeRecord_SAP2GC.btp">
+      <TypeName>XML2FF_TImeRecord_SAP2GC</TypeName>
+      <Namespace>G2_FTP_UC1.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>

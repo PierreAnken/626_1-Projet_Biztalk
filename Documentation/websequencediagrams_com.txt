@@ -1,0 +1,57 @@
+title G2 FTP UC1
+
+alt CardCreation
+Badgemaker->+SAP HR:CardCreation.txt 
+note right of Badgemaker: 
+UID (String), CardID (int)
+Support multiple cards at once
+end note
+SAP HR->-SAP HR: 
+note right of SAP HR: 
+UID (String), CardID (int), PIN (int)
+PIN is auto generated
+end note
+end
+
+alt AccessRightCreation
+Badgemaker->GateControl:AccessRightCreation.txt 
+note left of GateControl:CardId (int), AccessRight (String)
+end
+
+alt Emergency Group
+Emergency Group->GateControl:EmergencyMode.txt 
+note left of Emergency Group:
+Action (bool)
+set emergency mode = open all doors 
+end note
+end
+
+alt AccessRequest
+GateControl->GateControl: AccessRequest.txt
+note right of GateControl: CardId (int), PIN (int)
+GateControl->+SAP HR:PinCheck.txt
+note right of SAP HR: 
+UID (string), PIN (int)
+UID is mapped from DB with CardId
+end note
+SAP HR->-GateControl: PinCheckResponse.txt
+note right of SAP HR: 
+UID (string), IsValid (bool)
+PIN is cheched in DB with UID
+end note
+GateControl->GateControl: AccessResponse.txt
+note right of GateControl: 
+CardId (int), AccessGranted (bool)
+CardId is mapped from DB with UID
+end note
+end
+
+alt TimeRecord
+GateControl->SAP HR:TimeRecord.txt 
+note left of GateControl:
+UID (String), WorkTime (Duration)
+Support multiple records at once
+end note
+end
+
+
