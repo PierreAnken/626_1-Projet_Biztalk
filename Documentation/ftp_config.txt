@@ -1,7 +1,7 @@
-Remote FTP (host) Configuration for Gate Control
-Host:  (VM Host) 192.168.174.1
-User: admin
-Password: AdminHevs2020
+Remote FTP Configuration for Gate Control
+Host:  files.000webhost.com
+User: ilinkssp
+Password: AdminHevs01
 
 Local FTP Configuration for SAP HR
 Host: (VM) localhost
