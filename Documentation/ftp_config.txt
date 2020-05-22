@@ -1,15 +1,11 @@
-https://www.000webhost.com/
+Remote FTP (host) Configuration for Gate Control
+Host:  (VM Host) 192.168.174.1
+User: admin
+Password: AdminHevs2020
 
-Username : olivier.gottet@gmail.com
-Password : AdminHevs01
+Local FTP Configuration for SAP HR
+Host: (VM) localhost
+User: admin Password: empty
+Root folder: HEVS_S8_Projet_Biztalk\Process_folder\ftp_local
 
-URL of the folder : http://ilinkssp.000webhostapp.com/BizTalk/
 
-Folder has CHMOD 777 so everything should workhttps://www.000webhost.com/
-
-Username : olivier.gottet@gmail.com
-Password : AdminHevs01
-
-URL of the folder : http://ilinkssp.000webhostapp.com/BizTalk/
-
-Folder has CHMOD 777 so everything should work
