@@ -1,11 +1,10 @@
-Remote FTP
+Remote FTP - Gate Control
 User: biztalk@lmsecurite.ch
 Password: AdminHevs2020
 Host:ftp.lmsecurite.ch
 
-Local FTP Configuration for SAP HR
+Local FTP - SAP HR
 Host: (VM) localhost
-User: admin Password: empty
+User: admin 
+Password: empty
 Root folder: HEVS_S8_Projet_Biztalk\Process_folder\ftp_local
-
-
