@@ -133,8 +133,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[GC_Rights](
 	[CardId] [int] NOT NULL,
-	[AccessRight] [nvarchar](50) NOT NULL,
-	[UID] [nvarchar](50) NOT NULL
+	[AccessRight] [nvarchar](50) NOT NULL
 ) ON [PRIMARY]
 GO
 /****** Object:  Table [dbo].[SAP_HR]    Script Date: 19.05.2020 18:12:18 ******/
@@ -170,27 +169,27 @@ INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [W
 GO
 INSERT [dbo].[GC_AccessLog] ([CardId], [DoorId], [TimeStamp], [AccessResult], [WorkTimeComputed]) VALUES (6191128, 1, CAST(N'2020-05-18T08:30:22.007' AS DateTime), 1, NULL)
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (2235026, N'default', N'ASX12354')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (2235026, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (2906164, N'default', N'DSE53421')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (2906164, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (8139494, N'default', N'GRJ43212')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (8139494, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (2208972, N'default', N'FJE12342')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (2208972, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (5192471, N'default', N'TJK23543')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (5192471, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (9708443, N'default', N'FJE13555')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (9708443, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (1268207, N'default', N'RJK42528')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (1268207, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (6749277, N'default', N'TOI12312')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (6749277, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (3590351, N'default', N'TRJ13452')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (3590351, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (7330038, N'default', N'PTP52344')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (7330038, N'default')
 GO
-INSERT [dbo].[GC_Rights] ([CardId], [AccessRight], [UID]) VALUES (6191128, N'default', N'JKF34254')
+INSERT [dbo].[GC_Rights] ([CardId], [AccessRight]) VALUES (6191128, N'default')
 GO
 INSERT [dbo].[SAP_HR] ([UID], [CardId], [PIN]) VALUES (N'ASX12354', 2235026, 8742)
 GO

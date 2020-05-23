@@ -1,9 +1,4 @@
-Remote FTP (host) Configuration for Gate Control (not in use)
-Host:  (VM Host) 192.168.174.1
-User: admin
-Password: AdminHevs2020
-
-Hostpapa FTP
+Remote FTP
 User: biztalk@lmsecurite.ch
 Password: AdminHevs2020
 Host:ftp.lmsecurite.ch
