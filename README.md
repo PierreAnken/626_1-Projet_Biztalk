@@ -5,8 +5,9 @@ To reproduce the test envrionnement:
 1) Clone the repository https://github.com/PierreAnken/HEVS_S8_Projet_Biztalk
 or extract this archive file.
 
-2) Unzip Process_folders.zip in the same folder where he is.
-Tee folder ftp_remote is only a template for a remote ftp and is not needed.
+2) Unzip Process_folders.zip in the same folder to get following path 
+Desktop\HEVS_S8_Projet_Biztalk\Process_folder\ftp_local
+The folder ftp_remote is only a template for a remote ftp and is not needed.
 
 3) Run the sql script createDB.sql from folder Database into your local sql server manager
 
