@@ -35,7 +35,7 @@ namespace G2_FTP_UC1.Pipelines
 "me\" _locID=\"4\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4"+
 "cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "a0ba7eef-4304-432d-9d5b-02bcff1f8ae5";
+        private const string _versionDependentGuid = "50729ad2-57d0-48ef-af8e-728ec1bfb109";
         
         public FF2XML_PinCheck_GC2SAP()
         {

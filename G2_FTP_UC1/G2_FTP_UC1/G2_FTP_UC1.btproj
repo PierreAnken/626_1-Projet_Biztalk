@@ -250,15 +250,15 @@
     </Pipeline>
   </ItemGroup>
   <ItemGroup>
-    <Pipeline Include="Pipelines\FF2XML_TImeRecord_SAP2GC.btp">
-      <TypeName>FF2XML_TImeRecord_SAP2GC</TypeName>
+    <Pipeline Include="Pipelines\FF2XML_TimeRecord_GC2SAP.btp">
+      <TypeName>FF2XML_TimeRecord_GC2SAP</TypeName>
       <Namespace>G2_FTP_UC1.Pipelines</Namespace>
       <SubType>Task</SubType>
     </Pipeline>
   </ItemGroup>
   <ItemGroup>
-    <Pipeline Include="Pipelines\XML2FF_TImeRecord_SAP2GC.btp">
-      <TypeName>XML2FF_TImeRecord_SAP2GC</TypeName>
+    <Pipeline Include="Pipelines\XML2FF_TimeRecord_GC2SAP.btp">
+      <TypeName>XML2FF_TimeRecord_GC2SAP</TypeName>
       <Namespace>G2_FTP_UC1.Pipelines</Namespace>
       <SubType>Task</SubType>
     </Pipeline>

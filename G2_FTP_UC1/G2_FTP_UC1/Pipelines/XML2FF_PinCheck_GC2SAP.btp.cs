@@ -34,7 +34,7 @@ namespace G2_FTP_UC1.Pipelines
 "rs=\"-1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </"+
 "Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "1cdd543e-438e-47dc-a9d3-2ec1341c4b80";
+        private const string _versionDependentGuid = "32aa8b4f-3c64-4e6b-ba28-a63d65a18950";
         
         public XML2FF_PinCheck_GC2SAP()
         {

@@ -34,7 +34,7 @@ namespace G2_FTP_UC1.Pipelines
 "0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Component"+
 "s />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "0d24cc62-f4a1-4fe1-ac42-aa8ba4272a45";
+        private const string _versionDependentGuid = "98ca718a-4481-4eb1-a5a6-3645d5995d21";
         
         public XML2FF_AccessRightCreation_BM2GC()
         {

@@ -34,7 +34,7 @@ namespace G2_FTP_UC1.Pipelines
 " maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components "+
 "/>    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "abde2680-922d-4a11-8abf-b2666d8b1f4f";
+        private const string _versionDependentGuid = "4e410ea3-36a1-45bd-bd4c-73845cd8c7b7";
         
         public FF2XML_CardCreationPIN_SAP2SAP()
         {
