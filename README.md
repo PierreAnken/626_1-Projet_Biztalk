@@ -16,5 +16,6 @@ Host: localhost
 User: admin 
 Password: empty
 Root shared folder: HEVS_S8_Projet_Biztalk\Process_folder\ftp_local
+Read only shared folder: HEVS_S8_Projet_Biztalk\Process_folder\ftp_local_readonly\emergency_out_readonly avec un alias \emergency_out_readonly
 
 5) Use the messages samples from folder Message_Sample in the related local or ftp folder to get the process started 
